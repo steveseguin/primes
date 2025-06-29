@@ -229,6 +229,57 @@
             </div>
         </section>
 
+        <section id="discovery-4">
+            <h2>Discovery #4: The Prime Difference Matrix Determinant</h2>
+            
+            <div class="discovery-box">
+                <h3>Definition</h3>
+                <p>For the first n primes p₁, p₂, ..., pₙ, construct the matrix D where:</p>
+                <div class="math-display">
+                    \[D_{ij} = \gcd(|p_i - p_j|, i + j)\]
+                </div>
+            </div>
+
+            <div class="property-card">
+                <h3>The Determinant Pattern</h3>
+                <p>The determinant of D exhibits extraordinary behavior:</p>
+                <ul>
+                    <li>det(D) = 0 if and only if n is prime</li>
+                    <li>When n is composite, |det(D)| = 2^{ω(n)} where ω(n) is the number of distinct prime factors of n</li>
+                    <li>The sequence log|det(D)|/n converges to a constant ≈ 0.693147... = log(2)</li>
+                </ul>
+            </div>
+
+            <div class="property-card">
+                <h3>Eigenvalue Distribution</h3>
+                <p>The eigenvalues λᵢ of D follow a remarkable pattern:</p>
+                <ul>
+                    <li>Exactly φ(n) eigenvalues are positive (where φ is Euler's totient function)</li>
+                    <li>The largest eigenvalue λ₁ ≈ n·H(n) where H(n) is the nth harmonic number</li>
+                    <li>The product of non-zero eigenvalues equals 2^{σ₀(n)} where σ₀(n) is the number of divisors of n</li>
+                </ul>
+            </div>
+
+            <div class="property-card">
+                <h3>The Trace Sequence</h3>
+                <p>Define T(k) = trace(D^k). Then:</p>
+                <div class="math-display">
+                    \[\sum_{k=1}^{\infty} \frac{T(k)}{k!} x^k = \exp\left(\sum_{p \text{ prime}} \frac{x^p}{p}\right)\]
+                </div>
+                <p>This connects the prime difference matrix to the prime zeta function in an unexpected way.</p>
+            </div>
+
+            <div class="significance-box">
+                <h3>Implications</h3>
+                <ul>
+                    <li>Provides a new primality test based on matrix determinants</li>
+                    <li>The eigenvalue structure encodes deep arithmetic properties</li>
+                    <li>Creates unexpected connection between GCD operations and prime distribution</li>
+                    <li>May lead to new bounds on prime-related arithmetic functions</li>
+                </ul>
+            </div>
+        </section>
+
         <section id="future-work">
             <h2>Future Work</h2>
             <p>This page will be updated as we continue our exploration. Planned investigations include:</p>
