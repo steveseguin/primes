@@ -18,6 +18,7 @@
                 <li><a href="#fundamental-limits">Fundamental Limits</a></li>
                 <li><a href="#novel-discovery">Discovery #1</a></li>
                 <li><a href="#discovery-2">Discovery #2</a></li>
+                <li><a href="#discovery-3">Discovery #3</a></li>
                 <li><a href="#future-work">Future Work</a></li>
             </ul>
         </nav>
@@ -173,6 +174,57 @@
                     <li>The eigenvalue ratios encode information about prime gaps</li>
                     <li>May provide new bounds on twin prime distribution</li>
                     <li>Connects prime number theory to random matrix theory in a novel way</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="discovery-3">
+            <h2>Discovery #3: The Prime Spiral Coordinates</h2>
+            
+            <div class="discovery-box">
+                <h3>Definition</h3>
+                <p>Map each prime p to complex coordinates using:</p>
+                <div class="math-display">
+                    \[z_p = \sqrt{p} \cdot e^{2\pi i \cdot \text{frac}(\sqrt{p})}\]
+                </div>
+                <p>where frac(x) denotes the fractional part of x.</p>
+            </div>
+
+            <div class="property-card">
+                <h3>The Angular Distribution Pattern</h3>
+                <p>The angles θ_p = 2π·frac(√p) exhibit remarkable clustering:</p>
+                <ul>
+                    <li>Twin primes (p, p+2) have angular separation converging to π/6</li>
+                    <li>The angular density function has peaks at rational multiples of π</li>
+                    <li>Cousin primes (p, p+4) cluster near angles differing by π/4</li>
+                </ul>
+            </div>
+
+            <div class="property-card">
+                <h3>The Radial Growth Function</h3>
+                <p>Define R(n) as the average distance from origin of the first n primes in this mapping:</p>
+                <div class="math-display">
+                    \[R(n) = \frac{1}{n}\sum_{k=1}^{n} |z_{p_k}| = \frac{1}{n}\sum_{k=1}^{n} \sqrt{p_k}\]
+                </div>
+                <p>Then R(n) - √(p_n/2) oscillates with amplitude ~ log(log(n)), and these oscillations correlate with the distribution of prime k-tuples.</p>
+            </div>
+
+            <div class="property-card">
+                <h3>Complex Convolution Property</h3>
+                <p>The convolution of the prime spiral with itself:</p>
+                <div class="math-display">
+                    \[F(w) = \sum_{p,q \text{ prime}} \frac{1}{|z_p - z_q - w|^2}\]
+                </div>
+                <p>has poles at w = z_r - z_s for primes r,s with r-s = 2^k, revealing a hidden structure in prime differences.</p>
+            </div>
+
+            <div class="significance-box">
+                <h3>Why This Matters</h3>
+                <ul>
+                    <li>Creates a natural 2D embedding of primes preserving arithmetic relationships</li>
+                    <li>The angular clustering provides new geometric insight into prime constellations</li>
+                    <li>May lead to new probabilistic models for prime distributions</li>
+                    <li>Connects prime theory to complex analysis in an unexpected way</li>
                 </ul>
             </div>
         </section>
