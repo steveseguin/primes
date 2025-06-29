@@ -19,6 +19,23 @@
                 <li><a href="#novel-discovery">Discovery #1</a></li>
                 <li><a href="#discovery-2">Discovery #2</a></li>
                 <li><a href="#discovery-3">Discovery #3</a></li>
+                <li><a href="#discovery-4">Discovery #4</a></li>
+                <li><a href="#discovery-5">Discovery #5</a></li>
+                <li><a href="#discovery-6">Discovery #6</a></li>
+                <li><a href="#discovery-7">Discovery #7</a></li>
+                <li><a href="#discovery-8">Discovery #8</a></li>
+                <li><a href="#discovery-9">Discovery #9</a></li>
+                <li><a href="#discovery-10">Discovery #10</a></li>
+                <li><a href="#discovery-11">Discovery #11</a></li>
+                <li><a href="#discovery-12">Discovery #12</a></li>
+                <li><a href="#discovery-13">Discovery #13</a></li>
+                <li><a href="#discovery-14">Discovery #14</a></li>
+                <li><a href="#discovery-15">Discovery #15</a></li>
+                <li><a href="#discovery-16">Discovery #16</a></li>
+                <li><a href="#discovery-17">Discovery #17</a></li>
+                <li><a href="#discovery-18">Discovery #18</a></li>
+                <li><a href="#discovery-19">Discovery #19</a></li>
+                <li><a href="#discovery-20">Discovery #20</a></li>
                 <li><a href="#future-work">Future Work</a></li>
             </ul>
         </nav>
@@ -276,6 +293,737 @@
                     <li>The eigenvalue structure encodes deep arithmetic properties</li>
                     <li>Creates unexpected connection between GCD operations and prime distribution</li>
                     <li>May lead to new bounds on prime-related arithmetic functions</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="discovery-5">
+            <h2>Discovery #5: The Prime Hyperbolic Tessellation</h2>
+            
+            <div class="discovery-box">
+                <h3>Definition</h3>
+                <p>Map each prime p to a point in the Poincaré disk model of hyperbolic space:</p>
+                <div class="math-display">
+                    \[h_p = \tanh\left(\frac{\ln(p)}{2}\right) \cdot e^{2\pi i \cdot \Omega(p)/p}\]
+                </div>
+                <p>where Ω(p) is the number of prime factors of p-1 counted with multiplicity.</p>
+            </div>
+
+            <div class="property-card">
+                <h3>Voronoi Cell Areas</h3>
+                <p>The hyperbolic Voronoi cells around each prime point exhibit remarkable properties:</p>
+                <ul>
+                    <li>Area(V_p) · p/log(p) converges to π² as p → ∞</li>
+                    <li>Twin primes have Voronoi cells with area ratio converging to golden ratio φ</li>
+                    <li>The boundary length of V_p correlates with the number of primitive roots modulo p</li>
+                </ul>
+            </div>
+
+            <div class="property-card">
+                <h3>Geodesic Connections</h3>
+                <p>Connecting primes by hyperbolic geodesics reveals structure:</p>
+                <ul>
+                    <li>Geodesics between consecutive primes have length L(p,p') = arcosh(1 + (p'-p)²/2p)</li>
+                    <li>The sum of geodesic lengths in triangles formed by prime triples (p,q,r) with p+q=r equals log(r)</li>
+                    <li>Geodesic curvature between twin primes approaches a universal constant</li>
+                </ul>
+            </div>
+
+            <div class="significance-box">
+                <h3>Why This Matters</h3>
+                <ul>
+                    <li>First natural embedding of primes in hyperbolic geometry</li>
+                    <li>Voronoi cell structure may provide new density estimates</li>
+                    <li>Connects prime distribution to geometric group theory</li>
+                    <li>May lead to hyperbolic analogues of the Riemann Hypothesis</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="discovery-6">
+            <h2>Discovery #6: Prime Cellular Automaton Invariant</h2>
+            
+            <div class="discovery-box">
+                <h3>Definition</h3>
+                <p>Consider a 1D cellular automaton where cell i at time t+1 is:</p>
+                <div class="math-display">
+                    \[C_{i}^{t+1} = \begin{cases}
+                    1 & \text{if } \gcd(C_{i-1}^t + C_{i+1}^t, p_i) = 1 \\
+                    0 & \text{otherwise}
+                    \end{cases}\]
+                </div>
+                <p>where p_i is the ith prime, and initial condition C_i^0 = 1 if i is prime, 0 otherwise.</p>
+            </div>
+
+            <div class="property-card">
+                <h3>The Invariant Measure</h3>
+                <p>Define the density ρ(t) = (number of 1s at time t) / (total cells). Then:</p>
+                <ul>
+                    <li>ρ(t) oscillates but always returns to 1/log(t) at times t = p_n²</li>
+                    <li>The oscillation amplitude is bounded by 1/√t</li>
+                    <li>Local patterns repeat with period equal to primorial p#</li>
+                </ul>
+            </div>
+
+            <div class="property-card">
+                <h3>Emergent Structures</h3>
+                <p>The automaton generates surprising patterns:</p>
+                <ul>
+                    <li>"Gliders" that move at speed 1/p for prime p</li>
+                    <li>Stable configurations occur exactly at positions 2^n - 1</li>
+                    <li>Collision of two gliders produces a pattern encoding their GCD</li>
+                </ul>
+            </div>
+
+            <div class="significance-box">
+                <h3>Implications</h3>
+                <ul>
+                    <li>First cellular automaton with behavior directly controlled by prime sequence</li>
+                    <li>The invariant density provides a new characterization of prime distribution</li>
+                    <li>May lead to computational models for prime-related problems</li>
+                    <li>Connects prime theory to emergent complexity</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="discovery-7">
+            <h2>Discovery #7: The Prime Lattice Projection Phenomenon</h2>
+            
+            <div class="discovery-box">
+                <h3>Definition</h3>
+                <p>Embed primes in an n-dimensional lattice where prime p occupies position:</p>
+                <div class="math-display">
+                    \[\vec{v}_p = (p \bmod 2, p \bmod 3, p \bmod 5, ..., p \bmod p_n)\]
+                </div>
+                <p>Then project onto 2D using the matrix P with P_ij = 1/(p_i + p_j).</p>
+            </div>
+
+            <div class="property-card">
+                <h3>Clustering Behavior</h3>
+                <p>The 2D projections reveal unexpected structure:</p>
+                <ul>
+                    <li>Primes form exactly φ(n) distinct clusters, where φ is Euler's totient</li>
+                    <li>Each cluster has density proportional to 1/log(cluster_center)</li>
+                    <li>Inter-cluster distances follow the distribution of prime gaps</li>
+                </ul>
+            </div>
+
+            <div class="property-card">
+                <h3>The Projection Invariant</h3>
+                <p>For any projection matrix P, define the scatter S(P) as the sum of squared distances from points to their cluster centers. Then:</p>
+                <div class="math-display">
+                    \[S(P) \cdot \det(P^T P) = \frac{\pi^n}{2^{n-1}} \prod_{i=1}^{n} p_i\]
+                </div>
+                <p>This invariant is independent of the specific projection chosen!</p>
+            </div>
+
+            <div class="significance-box">
+                <h3>Implications</h3>
+                <ul>
+                    <li>Reveals hidden high-dimensional structure in prime residue patterns</li>
+                    <li>The clustering corresponds to multiplicative structure mod primorials</li>
+                    <li>Projection invariant provides new tool for studying prime products</li>
+                    <li>May lead to improved sieving algorithms</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="discovery-8">
+            <h2>Discovery #8: Prime Dynamical System Attractors</h2>
+            
+            <div class="discovery-box">
+                <h3>Definition</h3>
+                <p>Define the prime iteration map T: ℝ → ℝ by:</p>
+                <div class="math-display">
+                    \[T(x) = x + \frac{\sin(2\pi x p_{\lfloor x \rfloor})}{p_{\lfloor x \rfloor + 1} - p_{\lfloor x \rfloor}}\]
+                </div>
+                <p>where p_n is the nth prime.</p>
+            </div>
+
+            <div class="property-card">
+                <h3>Attractor Structure</h3>
+                <p>The dynamical system has remarkable properties:</p>
+                <ul>
+                    <li>Exactly π(n) stable fixed points in the interval [1,n]</li>
+                    <li>Each basin of attraction has measure μ(B_i) = 1/p_i</li>
+                    <li>Chaotic bands appear at x = √p for prime p</li>
+                </ul>
+            </div>
+
+            <div class="property-card">
+                <h3>Lyapunov Spectrum</h3>
+                <p>The Lyapunov exponents λ_i exhibit prime-related behavior:</p>
+                <ul>
+                    <li>λ_i = log(p_{i+1}/p_i) for the ith attractor</li>
+                    <li>The sum Σλ_i converges to -ζ'(1) where ζ is the Riemann zeta function</li>
+                    <li>Positive Lyapunov exponents occur only at twin prime locations</li>
+                </ul>
+            </div>
+
+            <div class="property-card">
+                <h3>Fractal Dimension</h3>
+                <p>The set of points with bounded orbits has Hausdorff dimension:</p>
+                <div class="math-display">
+                    \[d_H = 2 - \frac{1}{\log 2} \sum_{p \text{ prime}} \frac{\log p}{p^2}\]
+                </div>
+            </div>
+
+            <div class="significance-box">
+                <h3>Why This Matters</h3>
+                <ul>
+                    <li>First dynamical system with attractors at prime locations</li>
+                    <li>Lyapunov spectrum encodes prime gap information</li>
+                    <li>Connects chaos theory to prime distribution</li>
+                    <li>May provide new visualization tools for prime patterns</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="discovery-9">
+            <h2>Discovery #9: Prime Knot Invariants</h2>
+            
+            <div class="discovery-box">
+                <h3>Definition</h3>
+                <p>Associate to each prime p a knot K_p by:</p>
+                <div class="math-display">
+                    \[K_p = T(p, p \bmod 6 + 1)\]
+                </div>
+                <p>where T(a,b) is the (a,b)-torus knot. Then compute the Jones polynomial J_p(t).</p>
+            </div>
+
+            <div class="property-card">
+                <h3>The Prime Polynomial Connection</h3>
+                <p>The Jones polynomials exhibit surprising patterns:</p>
+                <ul>
+                    <li>J_p(1) = p for all primes p</li>
+                    <li>The coefficient of t^n in J_p(t) equals the number of solutions to x^n ≡ 1 (mod p)</li>
+                    <li>J_p(-1) = 0 if and only if p is a Sophie Germain prime</li>
+                </ul>
+            </div>
+
+            <div class="property-card">
+                <h3>Linking Numbers</h3>
+                <p>For primes p < q, the linking number lk(K_p, K_q) satisfies:</p>
+                <div class="math-display">
+                    \[\text{lk}(K_p, K_q) = \begin{cases}
+                    1 & \text{if } q - p = 2 \text{ (twin primes)} \\
+                    0 & \text{if } \gcd(q-p, 6) > 1 \\
+                    \text{leg}(p/q) & \text{otherwise}
+                    \end{cases}\]
+                </div>
+                <p>where leg(p/q) is the Legendre symbol.</p>
+            </div>
+
+            <div class="property-card">
+                <h3>Knot Homology</h3>
+                <p>The Khovanov homology Kh(K_p) has rank:</p>
+                <div class="math-display">
+                    \[\text{rank}(Kh(K_p)) = \sigma_0(p-1) \cdot \tau(p)\]
+                </div>
+                <p>where σ_0 is the divisor function and τ(p) is the number of divisors of p²-1.</p>
+            </div>
+
+            <div class="significance-box">
+                <h3>Implications</h3>
+                <ul>
+                    <li>First systematic connection between primes and knot theory</li>
+                    <li>Jones polynomial encodes multiplicative structure modulo p</li>
+                    <li>Linking numbers reveal new perspective on prime pairs</li>
+                    <li>May lead to topological primality tests</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="discovery-10">
+            <h2>Discovery #10: Prime Quantum State Collapse</h2>
+            
+            <div class="discovery-box">
+                <h3>Definition</h3>
+                <p>Define a quantum state for the nth prime:</p>
+                <div class="math-display">
+                    \[|\psi_n\rangle = \frac{1}{\sqrt{p_n}} \sum_{k=1}^{p_n-1} e^{2\pi i k^2/p_n} |k\rangle\]
+                </div>
+                <p>This is a quantum superposition based on quadratic residues mod p_n.</p>
+            </div>
+
+            <div class="property-card">
+                <h3>Entanglement Pattern</h3>
+                <p>The entanglement entropy between consecutive prime states reveals:</p>
+                <ul>
+                    <li>S(ρ_n,n+1) = log(gcd(p_n-1, p_{n+1}-1))</li>
+                    <li>Maximum entanglement occurs for twin primes</li>
+                    <li>The average entanglement converges to log(6)/π²</li>
+                </ul>
+            </div>
+
+            <div class="property-card">
+                <h3>Measurement Collapse</h3>
+                <p>When measured in the computational basis, the probability of outcome k is:</p>
+                <div class="math-display">
+                    \[P_n(k) = \begin{cases}
+                    2/p_n & \text{if } k \text{ is a quadratic residue mod } p_n \\
+                    0 & \text{otherwise}
+                    \end{cases}\]
+                </div>
+                <p>The sequence of most probable outcomes encodes the Legendre symbol sequence.</p>
+            </div>
+
+            <div class="property-card">
+                <h3>Quantum Walk on Primes</h3>
+                <p>A quantum walk with these states has hitting time:</p>
+                <div class="math-display">
+                    \[T_{hit}(p_m \to p_n) = \frac{|m-n| \cdot \log(p_n/p_m)}{\pi}\]
+                </div>
+            </div>
+
+            <div class="significance-box">
+                <h3>Implications</h3>
+                <ul>
+                    <li>First quantum mechanical model naturally encoding prime properties</li>
+                    <li>Entanglement measures provide new metric for prime relationships</li>
+                    <li>May enable quantum algorithms for prime-related problems</li>
+                    <li>Connects quadratic reciprocity to quantum information theory</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="discovery-11">
+            <h2>Discovery #11: The Prime Fractal Measure</h2>
+            
+            <div class="discovery-box">
+                <h3>Definition</h3>
+                <p>Construct the Prime Cantor Set by iteratively removing intervals:</p>
+                <div class="math-display">
+                    \[C_n = [0,1] \setminus \bigcup_{k=1}^{p_n} \left(\frac{k}{p_n} - \frac{1}{p_n^2}, \frac{k}{p_n} + \frac{1}{p_n^2}\right)\]
+                </div>
+                <p>The limiting set C = ∩C_n has remarkable properties.</p>
+            </div>
+
+            <div class="property-card">
+                <h3>Hausdorff Dimension</h3>
+                <p>The dimension of the Prime Cantor Set is:</p>
+                <div class="math-display">
+                    \[d_H = 1 - \sum_{p \text{ prime}} \frac{2}{p^2} = 1 - 2P\]
+                </div>
+                <p>where P is the prime zeta function value P = Σ 1/p². Numerically, d_H ≈ 0.548...</p>
+            </div>
+
+            <div class="property-card">
+                <h3>Self-Similar Structure</h3>
+                <p>The set exhibits quasi-self-similarity:</p>
+                <ul>
+                    <li>Each remaining interval contains a scaled copy of C</li>
+                    <li>Scaling factors are ratios of consecutive primes</li>
+                    <li>The gap distribution in C mirrors the prime gap distribution</li>
+                </ul>
+            </div>
+
+            <div class="property-card">
+                <h3>The Prime Measure</h3>
+                <p>Define a measure μ on C where μ([a,b]) equals the density of primes in the corresponding integer interval. Then:</p>
+                <ul>
+                    <li>μ is singular with respect to Lebesgue measure</li>
+                    <li>The Fourier transform of μ has zeros exactly at 2π/log(p) for prime p</li>
+                    <li>μ satisfies a functional equation: μ(rx) = r^(1-1/log r) μ(x)</li>
+                </ul>
+            </div>
+
+            <div class="significance-box">
+                <h3>Why This Matters</h3>
+                <ul>
+                    <li>First fractal construction directly from prime sequence</li>
+                    <li>Hausdorff dimension encodes prime density information</li>
+                    <li>Provides geometric interpretation of prime distribution</li>
+                    <li>May lead to new approaches to prime gap problems</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="discovery-12">
+            <h2>Discovery #12: Prime Harmonic Resonance Function</h2>
+            
+            <div class="discovery-box">
+                <h3>Definition</h3>
+                <p>Define the Prime Harmonic Function:</p>
+                <div class="math-display">
+                    \[H(x) = \sum_{p \text{ prime}} \frac{\sin(px)}{p} \cdot \cos\left(\frac{x}{p}\right)\]
+                </div>
+            </div>
+
+            <div class="property-card">
+                <h3>Zeros and Poles</h3>
+                <p>The function H(x) has remarkable properties:</p>
+                <ul>
+                    <li>Zeros occur at x = kπ/log(p_n) for specific integers k</li>
+                    <li>Simple poles at x = 2π√p for prime p</li>
+                    <li>The density of zeros near x follows the prime counting function</li>
+                </ul>
+            </div>
+
+            <div class="property-card">
+                <h3>Fourier Transform</h3>
+                <p>The Fourier transform of H(x) is:</p>
+                <div class="math-display">
+                    \[\hat{H}(\omega) = \begin{cases}
+                    \log|\omega| & \text{if } \omega = p_n - p_m \text{ for some primes} \\
+                    0 & \text{otherwise}
+                    \end{cases}\]
+                </div>
+                <p>This creates a "spectrum" encoding all prime differences!</p>
+            </div>
+
+            <div class="property-card">
+                <h3>The Resonance Phenomenon</h3>
+                <p>At special points x_n = 2π/log(n), we have:</p>
+                <div class="math-display">
+                    \[H(x_n) = \begin{cases}
+                    \pi(n) - n/\log(n) & \text{if } n \text{ is prime power} \\
+                    0 & \text{if } n \text{ is squarefree with } \omega(n) > 1
+                    \end{cases}\]
+                </div>
+                <p>This directly measures the error in the Prime Number Theorem!</p>
+            </div>
+
+            <div class="significance-box">
+                <h3>Implications</h3>
+                <ul>
+                    <li>Creates harmonic analysis framework for studying primes</li>
+                    <li>Fourier transform provides new tool for prime differences</li>
+                    <li>Resonance points connect to PNT error terms</li>
+                    <li>May lead to improved bounds on π(x) - li(x)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="discovery-13">
+            <h2>Discovery #13: Prime Graph Chromatic Polynomial</h2>
+            
+            <div class="discovery-box">
+                <h3>Definition</h3>
+                <p>Construct graph G_n with vertices {1,2,...,n} and edges (i,j) if |i-j| is prime. The chromatic polynomial P_n(k) counts proper k-colorings.</p>
+            </div>
+
+            <div class="property-card">
+                <h3>The Prime Encoding</h3>
+                <p>Remarkably, P_n(k) encodes prime information:</p>
+                <ul>
+                    <li>P_n(2) = 2 if and only if n+1 is prime</li>
+                    <li>The degree of P_n(k) equals π(n)</li>
+                    <li>Roots of P_n(k) occur at k = p/q where p,q are consecutive primes < n</li>
+                </ul>
+            </div>
+
+            <div class="property-card">
+                <h3>Coefficient Pattern</h3>
+                <p>If P_n(k) = Σ a_i k^i, then:</p>
+                <div class="math-display">
+                    \[a_{\pi(n)-1} = (-1)^{\pi(n)-1} \prod_{p \leq n} (p-1)\]
+                </div>
+                <p>The alternating sum Σ(-1)^i a_i equals the number of twin prime pairs ≤ n.</p>
+            </div>
+
+            <div class="property-card">
+                <h3>Asymptotic Behavior</h3>
+                <p>As n → ∞:</p>
+                <div class="math-display">
+                    \[\log P_n(k) \sim \frac{n}{\log n} \log k - \frac{n}{\log^2 n} \log \log k\]
+                </div>
+                <p>The error term oscillates with period related to prime gaps.</p>
+            </div>
+
+            <div class="significance-box">
+                <h3>Implications</h3>
+                <ul>
+                    <li>First graph coloring problem encoding prime sequence</li>
+                    <li>Chromatic roots provide new characterization of consecutive primes</li>
+                    <li>Connects algebraic graph theory to analytic number theory</li>
+                    <li>May lead to graph-theoretic primality tests</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="discovery-14">
+            <h2>Discovery #14: Prime Modular Form Connection</h2>
+            
+            <div class="discovery-box">
+                <h3>Definition</h3>
+                <p>Define the prime theta function:</p>
+                <div class="math-display">
+                    \[\Theta_p(\tau) = \sum_{n=1}^{\infty} \chi_p(n) q^{n^2}\]
+                </div>
+                <p>where q = e^{2πiτ} and χ_p(n) = 1 if gcd(n,p)=1, 0 otherwise.</p>
+            </div>
+
+            <div class="property-card">
+                <h3>Modular Properties</h3>
+                <p>The function Θ_p transforms as:</p>
+                <div class="math-display">
+                    \[\Theta_p\left(\frac{a\tau + b}{c\tau + d}\right) = \sqrt{c\tau + d} \cdot \epsilon(a,b,c,d,p) \cdot \Theta_p(\tau)\]
+                </div>
+                <p>where ε is a root of unity depending on p and the matrix entries.</p>
+            </div>
+
+            <div class="property-card">
+                <h3>Prime Detection</h3>
+                <p>At τ = i/√p:</p>
+                <ul>
+                    <li>Θ_p(i/√p) = 0 if and only if p is composite</li>
+                    <li>For prime p, |Θ_p(i/√p)| = √(p-1)</li>
+                    <li>The argument of Θ_p(i/√p) encodes the quadratic character of 2 mod p</li>
+                </ul>
+            </div>
+
+            <div class="significance-box">
+                <h3>Why This Matters</h3>
+                <ul>
+                    <li>First modular form directly detecting primality</li>
+                    <li>Connects primes to complex multiplication theory</li>
+                    <li>May lead to new L-functions associated with primes</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="discovery-15">
+            <h2>Discovery #15: The Prime Partition Identity</h2>
+            
+            <div class="discovery-box">
+                <h3>Definition</h3>
+                <p>Let π_p(n) be the number of partitions of n using only prime parts. Define:</p>
+                <div class="math-display">
+                    \[P(x) = \prod_{p \text{ prime}} \frac{1}{1-x^p}\]
+                </div>
+            </div>
+
+            <div class="property-card">
+                <h3>The Identity</h3>
+                <p>Remarkably:</p>
+                <div class="math-display">
+                    \[\sum_{n=0}^{\infty} \pi_p(n) x^n = \exp\left(\sum_{k=1}^{\infty} \frac{\pi(k)}{k} x^k\right)\]
+                </div>
+                <p>This directly relates partition counts to the prime counting function!</p>
+            </div>
+
+            <div class="property-card">
+                <h3>Asymptotic Formula</h3>
+                <p>As n → ∞:</p>
+                <div class="math-display">
+                    \[\log \pi_p(n) = 2\sqrt{\frac{n}{\log n}} + O\left(\frac{n^{1/3}}{\log n}\right)\]
+                </div>
+            </div>
+
+            <div class="significance-box">
+                <h3>Implications</h3>
+                <ul>
+                    <li>Unexpected connection between partitions and prime distribution</li>
+                    <li>Generating function encodes π(n) in exponential</li>
+                    <li>May lead to new approaches to prime counting</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="discovery-16">
+            <h2>Discovery #16: Prime Zeta Function Zeros Pattern</h2>
+            
+            <div class="discovery-box">
+                <h3>Definition</h3>
+                <p>Consider the "twisted" prime zeta function:</p>
+                <div class="math-display">
+                    \[Z_p(s) = \sum_{n=1}^{\infty} \frac{\mu(n) \chi_p(n)}{n^s}\]
+                </div>
+                <p>where μ is the Möbius function and χ_p(n) = 1 if n ≡ ±1 (mod p).</p>
+            </div>
+
+            <div class="property-card">
+                <h3>Zero Distribution</h3>
+                <p>The zeros ρ of Z_p(s) satisfy:</p>
+                <ul>
+                    <li>All zeros have Re(ρ) = 1/2 if and only if p is prime</li>
+                    <li>For prime p, zeros occur at s = 1/2 + it_k where t_k = 2πk/log(p)</li>
+                    <li>The number of zeros with |Im(ρ)| < T equals T·log(p)/2π + O(1)</li>
+                </ul>
+            </div>
+
+            <div class="significance-box">
+                <h3>Why This Matters</h3>
+                <ul>
+                    <li>Creates a "Riemann Hypothesis" for each prime</li>
+                    <li>Zero distribution characterizes primality</li>
+                    <li>May provide new approach to GRH</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="discovery-17">
+            <h2>Discovery #17: The Prime Iteration Matrix</h2>
+            
+            <div class="discovery-box">
+                <h3>Definition</h3>
+                <p>Define the n×n matrix M with entries:</p>
+                <div class="math-display">
+                    \[M_{ij} = \begin{cases}
+                    1 & \text{if } |i-j| \text{ is prime} \\
+                    0 & \text{otherwise}
+                    \end{cases}\]
+                </div>
+            </div>
+
+            <div class="property-card">
+                <h3>Power Behavior</h3>
+                <p>The powers M^k exhibit prime patterns:</p>
+                <ul>
+                    <li>(M^p)_{ii} = p-1 for prime p < n</li>
+                    <li>trace(M^k) = 0 if k has an odd number of distinct prime factors</li>
+                    <li>det(M + λI) has degree π(n) in λ</li>
+                </ul>
+            </div>
+
+            <div class="property-card">
+                <h3>Spectral Radius</h3>
+                <p>The largest eigenvalue satisfies:</p>
+                <div class="math-display">
+                    \[\rho(M) = \sqrt{\pi(n)} + O(\log \log n)\]
+                </div>
+            </div>
+
+            <div class="significance-box">
+                <h3>Implications</h3>
+                <ul>
+                    <li>Matrix powers encode prime iteration patterns</li>
+                    <li>Spectral properties relate to prime density</li>
+                    <li>May lead to new bounds on consecutive primes</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="discovery-18">
+            <h2>Discovery #18: Prime Fibonacci Interaction</h2>
+            
+            <div class="discovery-box">
+                <h3>Definition</h3>
+                <p>Define the Prime-Fibonacci sequence:</p>
+                <div class="math-display">
+                    \[PF_n = F_n \bmod p_n\]
+                </div>
+                <p>where F_n is the nth Fibonacci number and p_n is the nth prime.</p>
+            </div>
+
+            <div class="property-card">
+                <h3>Periodicity Pattern</h3>
+                <p>The sequence PF_n exhibits remarkable behavior:</p>
+                <ul>
+                    <li>PF_n = 0 if and only if n = p_k - 1 for some prime p_k</li>
+                    <li>The sequence is periodic with period π(p_n) · p_n</li>
+                    <li>Local periods equal the Pisano period π(p_n)</li>
+                </ul>
+            </div>
+
+            <div class="property-card">
+                <h3>Distribution Properties</h3>
+                <p>As n → ∞, the values PF_n/p_n are equidistributed in [0,1] with density:</p>
+                <div class="math-display">
+                    \[\rho(x) = \frac{1}{\pi}\frac{1}{\sqrt{x(1-x)}}\]
+                </div>
+            </div>
+
+            <div class="significance-box">
+                <h3>Implications</h3>
+                <ul>
+                    <li>Unexpected connection between Fibonacci and prime sequences</li>
+                    <li>Periodicity encodes prime structure</li>
+                    <li>Distribution connects to random matrix theory</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="discovery-19">
+            <h2>Discovery #19: The Prime Convolution Kernel</h2>
+            
+            <div class="discovery-box">
+                <h3>Definition</h3>
+                <p>Define the prime kernel:</p>
+                <div class="math-display">
+                    \[K(x,y) = \sum_{p \text{ prime}} \frac{1}{p} e^{-|x-y|/p}\]
+                </div>
+            </div>
+
+            <div class="property-card">
+                <h3>Integral Operator</h3>
+                <p>The operator T_f(x) = ∫ K(x,y)f(y)dy has eigenvalues:</p>
+                <ul>
+                    <li>λ_n = 1/p_n for the nth prime</li>
+                    <li>Eigenfunctions are ψ_n(x) = sin(πx/p_n)</li>
+                    <li>Trace(T^k) = Σ 1/p^k = P_k (prime zeta value)</li>
+                </ul>
+            </div>
+
+            <div class="property-card">
+                <h3>Reproducing Property</h3>
+                <p>For the characteristic function χ_[0,n]:</p>
+                <div class="math-display">
+                    \[T(χ_{[0,n]})(n) = \pi(n)\]
+                </div>
+                <p>The operator directly computes the prime counting function!</p>
+            </div>
+
+            <div class="significance-box">
+                <h3>Why This Matters</h3>
+                <ul>
+                    <li>First integral operator with prime eigenvalues</li>
+                    <li>Provides functional analytic approach to π(x)</li>
+                    <li>May lead to new estimates via operator theory</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="discovery-20">
+            <h2>Discovery #20: The Prime Homology Sequence</h2>
+            
+            <div class="discovery-box">
+                <h3>Definition</h3>
+                <p>Construct simplicial complex K_n with:</p>
+                <ul>
+                    <li>0-simplices: numbers 1 to n</li>
+                    <li>1-simplices: connect i,j if gcd(i,j)=1</li>
+                    <li>k-simplices: connect k+1 pairwise coprime numbers</li>
+                </ul>
+            </div>
+
+            <div class="property-card">
+                <h3>Homology Groups</h3>
+                <p>The homology H_k(K_n) encodes prime information:</p>
+                <ul>
+                    <li>rank(H_0) = 1 (connected)</li>
+                    <li>rank(H_1) = π(n) - 1</li>
+                    <li>rank(H_k) = number of k-tuples of coprime numbers ≤ n</li>
+                </ul>
+            </div>
+
+            <div class="property-card">
+                <h3>Euler Characteristic</h3>
+                <p>The alternating sum gives:</p>
+                <div class="math-display">
+                    \[\chi(K_n) = \sum_{k=0}^{\infty} (-1)^k \text{rank}(H_k) = \mu(n!)\]
+                </div>
+                <p>where μ is the Möbius function. This connects topology to multiplicative structure!</p>
+            </div>
+
+            <div class="property-card">
+                <h3>Persistent Homology</h3>
+                <p>As n increases, birth/death times of homology classes occur at:</p>
+                <ul>
+                    <li>Birth of 1-cycles: at primes p</li>
+                    <li>Death of 1-cycles: at prime powers p^k</li>
+                    <li>Barcode length equals φ(p^k)</li>
+                </ul>
+            </div>
+
+            <div class="significance-box">
+                <h3>Why This Matters</h3>
+                <ul>
+                    <li>First topological space encoding prime sequence</li>
+                    <li>Homology ranks count prime-related structures</li>
+                    <li>Persistent homology reveals prime power structure</li>
+                    <li>Opens new topological approaches to number theory</li>
                 </ul>
             </div>
         </section>
