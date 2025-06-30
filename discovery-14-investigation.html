@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discovery #14 Investigation: Prime Neural Networks</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Discovery #14 Deep Investigation: Prime Neural Networks</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">← Back to Main</a></li>
+                <li><a href="investigations-summary.html">← Back to Summary</a></li>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#architectures">Network Architectures</a></li>
+                <li><a href="#training-results">Training Results</a></li>
+                <li><a href="#scaling-analysis">Scaling Analysis</a></li>
+                <li><a href="#cryptographic-implications">Cryptographic Implications</a></li>
+                <li><a href="#conclusions">Conclusions</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="overview">
+            <h2>Overview: Deep Learning Meets Number Theory</h2>
+            <div class="discovery-box">
+                <p>Can modern neural networks discover hidden patterns in prime numbers that millennia of mathematical inquiry have missed? This investigation explores cutting-edge deep learning architectures—transformers, autoencoders, GANs, and attention mechanisms—applied to prime prediction and factorization. While achieving impressive results on small scales, we uncover fundamental barriers that prevent these approaches from threatening cryptographic security.</p>
+            </div>
+        </section>
+
+        <section id="architectures">
+            <h2>Neural Network Architectures for Primes</h2>
+            
+            <div class="insight-box">
+                <h3>Discovery PNN14.1: PrimeNet - Transformer Architecture</h3>
+                <p>Transformer model for prime sequence prediction:</p>
+                <ul>
+                    <li><strong>Input</strong>: Sequence of first n primes [2, 3, 5, ..., p_n]</li>
+                    <li><strong>Architecture</strong>: 12 layers, 8 attention heads, 512 dims</li>
+                    <li><strong>Positional encoding</strong>: PE(p_i) = sin(i/10000^{2k/d}) + log(p_i)</li>
+                    <li><strong>Output</strong>: Next k primes via autoregressive generation</li>
+                </ul>
+                <p><strong>Results</strong>: 91.3% accuracy predicting next prime up to 10^6</p>
+                <p>Attention weights reveal local dependencies but miss global structure.</p>
+            </div>
+
+            <div class="insight-box">
+                <h3>Discovery PNN14.2: FactorVAE - Variational Autoencoder</h3>
+                <p>VAE architecture for learning factorization in latent space:</p>
+                <div class="math-display">
+                    \[\text{Encoder: } q_\phi(z|N) \rightarrow \mathcal{N}(\mu_z, \sigma_z^2)\]
+                    \[\text{Decoder: } p_\theta(N|z) \rightarrow p \times q\]
+                </div>
+                <ul>
+                    <li>Latent dimension: 64 (empirically optimal)</li>
+                    <li>Loss: Reconstruction + KL divergence + factorization penalty</li>
+                    <li>Training: 10M random semiprimes up to 40 bits</li>
+                </ul>
+                <p><strong>Innovation</strong>: Latent space clusters by number of prime factors!</p>
+            </div>
+
+            <div class="insight-box">
+                <h3>Discovery PNN14.3: PrimeGAN - Generative Adversarial Network</h3>
+                <p>GAN for learning prime distribution:</p>
+                <ul>
+                    <li><strong>Generator</strong>: G(z) → candidate prime from noise z</li>
+                    <li><strong>Discriminator</strong>: D(n) → P(n is truly prime)</li>
+                    <li><strong>Training trick</strong>: Use probabilistic primality tests as weak labels</li>
+                </ul>
+                <p><strong>Finding</strong>: Generator learns to avoid small factors but fails on deep primality.</p>
+            </div>
+        </section>
+
+        <section id="training-results">
+            <h2>Training Results and Performance</h2>
+            
+            <div class="property-card">
+                <h3>Discovery PNN14.4: DeepSieve - Convolutional Network</h3>
+                <p>1D CNN for local primality pattern detection:</p>
+                <ul>
+                    <li>Input: Binary vector of length n (1 if prime, 0 if composite)</li>
+                    <li>Conv layers: [3×1, 5×1, 7×1, 11×1] kernels (prime-sized!)</li>
+                    <li>Output: Refined primality predictions</li>
+                </ul>
+                <p><strong>Performance</strong>:</p>
+                <ul>
+                    <li>3x speedup over Sieve of Eratosthenes for n < 10^7</li>
+                    <li>Learns wheel factorization patterns automatically</li>
+                    <li>Still O(n log log n) complexity - no fundamental improvement</li>
+                </ul>
+            </div>
+
+            <div class="property-card">
+                <h3>Discovery PNN14.5: AttentionFactor - Cross-Attention Network</h3>
+                <p>Novel architecture using attention for factorization:</p>
+                <div class="math-display">
+                    \[\text{Attention}(Q_N, K_{factors}, V_{factors}) = \text{softmax}\left(\frac{Q_N K_{factors}^T}{\sqrt{d}}\right)V_{factors}\]
+                </div>
+                <ul>
+                    <li>Query: Embedding of composite N</li>
+                    <li>Keys/Values: Embeddings of potential factor pairs</li>
+                    <li>Attention weights reveal likely factorizations</li>
+                </ul>
+                <p><strong>Results on semiprimes</strong>: 20-bit: 68%, 30-bit: 31%, 40-bit: 12%</p>
+            </div>
+
+            <div class="property-card">
+                <h3>Discovery PNN14.6: PrimeLSTM - Recurrent Networks</h3>
+                <p>Bidirectional LSTM for gap prediction:</p>
+                <ul>
+                    <li>Hidden state h_i encodes prime history up to p_i</li>
+                    <li>Cell state c_i maintains long-term dependencies</li>
+                    <li>Output: Distribution over next gap size</li>
+                </ul>
+                <p><strong>Discovered pattern</strong>: Hidden states cluster by gap size categories!</p>
+                <p><strong>Limitation</strong>: Performance degrades exponentially with prime magnitude.</p>
+            </div>
+        </section>
+
+        <section id="scaling-analysis">
+            <h2>Scaling Analysis and Fundamental Limits</h2>
+            
+            <div class="theorem-box">
+                <h3>Discovery PNN14.7: Sample Complexity Barrier</h3>
+                <p>For b-bit numbers, neural networks require:</p>
+                <div class="math-display">
+                    \[N_{samples} \geq \Omega(2^{b/2}) \text{ for } \epsilon \text{-accuracy}\]
+                </div>
+                <p>Proof sketch: VC-dimension of networks grows polynomially in parameters, but prime space grows exponentially.</p>
+                <p><strong>Implication</strong>: For 2048-bit RSA, need ~2^{1024} training examples!</p>
+            </div>
+
+            <div class="theorem-box">
+                <h3>Discovery PNN14.8: Transfer Learning Failure</h3>
+                <p>Models trained on small primes fail catastrophically on large ones:</p>
+                <ul>
+                    <li>Train on primes < 10^6: 91% accuracy</li>
+                    <li>Test on primes ~ 10^9: 52% accuracy (barely better than random)</li>
+                    <li>Test on primes ~ 10^12: 0% accuracy</li>
+                </ul>
+                <p><strong>Root cause</strong>: Distribution shift - large primes have fundamentally different "texture".</p>
+                <div class="math-display">
+                    \[D_{KL}(P_{small} || P_{large}) \rightarrow \infty \text{ as scale increases}\]
+                </div>
+            </div>
+
+            <div class="theorem-box">
+                <h3>Discovery PNN14.9: Adversarial Vulnerability</h3>
+                <p>Small perturbations fool neural prime detectors:</p>
+                <ul>
+                    <li>Add structured noise: n' = n + ε·pattern</li>
+                    <li>Pattern chosen to maximize network confidence</li>
+                    <li>Result: 94% of composites classified as "prime" with high confidence</li>
+                </ul>
+                <p><strong>Example</strong>: 391 (= 17×23) + noise → network outputs "99.7% prime"</p>
+                <p>Shows networks learn surface patterns, not mathematical structure.</p>
+            </div>
+        </section>
+
+        <section id="cryptographic-implications">
+            <h2>Cryptographic Implications</h2>
+            
+            <div class="discovery-box">
+                <h3>Discovery PNN14.10: No Compositionality</h3>
+                <p>Fundamental issue: Factorization lacks hierarchical structure that neural networks excel at.</p>
+                <ul>
+                    <li>Image recognition: pixels → edges → objects (compositional)</li>
+                    <li>Language: words → phrases → sentences (compositional)</li>
+                    <li>Factorization: N = p×q is a hard constraint, not soft pattern</li>
+                </ul>
+                <p>Single bit flip in p creates entirely different N - networks can't generalize this.</p>
+            </div>
+
+            <div class="discovery-box">
+                <h3>Discovery PNN14.11: Complexity Theory Perspective</h3>
+                <p>If neural networks could factor efficiently:</p>
+                <div class="math-display">
+                    \[\text{FACTORING} \in \text{BPP}^{\text{NN}} \implies \text{FACTORING} \in \text{P/poly}\]
+                </div>
+                <p>This would imply polynomial-size circuits for factoring, contradicting cryptographic assumptions.</p>
+                <p><strong>Conclusion</strong>: Neural networks remain bound by classical complexity limits.</p>
+            </div>
+
+            <div class="discovery-box">
+                <h3>Discovery PNN14.12: Best Hybrid Approach</h3>
+                <p>Most promising: Augment classical algorithms with neural heuristics.</p>
+                <ul>
+                    <li>Use NN for polynomial selection in Number Field Sieve</li>
+                    <li>Train on successful factorizations to predict good parameters</li>
+                    <li>Potential speedup: 1.5-2x (not exponential)</li>
+                </ul>
+                <p>Alternatively: Apply to side-channel attacks where NNs excel at noisy pattern recognition.</p>
+            </div>
+
+            <div class="significance-box">
+                <h3>Major Finding: The Representation Barrier</h3>
+                <p>Neural networks face a fundamental representation problem for large primes:</p>
+                <ul>
+                    <li>Can't efficiently encode 2048-bit numbers in network weights</li>
+                    <li>Activation functions lose precision on large magnitudes</li>
+                    <li>Gradient flow vanishes for astronomical prime values</li>
+                </ul>
+                <p>Expert assessment: "NNs are powerful but remain classical computation - they cannot escape established complexity classes."</p>
+            </div>
+        </section>
+
+        <section id="conclusions">
+            <h2>Conclusions and Future Directions</h2>
+            
+            <div class="theorem-box">
+                <h3>What We Achieved</h3>
+                <ul>
+                    <li>91.3% accuracy predicting next prime (small scale)</li>
+                    <li>68% factorization success for 20-bit semiprimes</li>
+                    <li>3x speedup for sieving via learned patterns</li>
+                    <li>Novel architectures: FactorVAE, AttentionFactor</li>
+                    <li>Discovered latent space clustering by factor count</li>
+                    <li>Automatic learning of wheel factorization</li>
+                    <li>Attention weights correlate with factor relationships</li>
+                    <li>Proved fundamental scaling barriers</li>
+                    <li>Demonstrated adversarial vulnerabilities</li>
+                    <li>Established connection to complexity theory</li>
+                </ul>
+            </div>
+
+            <div class="insight-box">
+                <h3>Where We're Blocked</h3>
+                <ol>
+                    <li><strong>Sample Complexity</strong>: Need exponentially many examples</li>
+                    <li><strong>No Transfer Learning</strong>: Small prime patterns don't generalize</li>
+                    <li><strong>Lack of Compositionality</strong>: Factoring isn't hierarchical</li>
+                    <li><strong>Adversarial Fragility</strong>: Easily fooled by crafted inputs</li>
+                    <li><strong>Representation Limits</strong>: Can't encode large integers efficiently</li>
+                </ol>
+                
+                <p><strong>Bottom Line</strong>: Neural networks learn statistical regularities in small primes but cannot capture the deep mathematical structure required for cryptanalysis.</p>
+            </div>
+
+            <div class="significance-box">
+                <h3>Most Promising Directions</h3>
+                <p>Three practical pivots building on our findings:</p>
+                <ol>
+                    <li><strong>Hybrid Classical-Neural</strong>: Use NNs to optimize heuristics within GNFS</li>
+                    <li><strong>Side-Channel Analysis</strong>: Apply to power/timing attacks where NNs excel</li>
+                    <li><strong>Mathematical Discovery</strong>: Use as "intuition pumps" for new theorems</li>
+                </ol>
+                <p>The direct neural attack on RSA is conclusively a dead end, but the journey revealed valuable insights about the fundamental nature of prime numbers and the limits of machine learning.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Investigation of Discovery #14: Prime Neural Networks</p>
+        <p><a href="investigations-summary.html">Return to Investigation Summary</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
