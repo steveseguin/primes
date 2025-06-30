@@ -30,7 +30,11 @@
             <h2>Overview: Information Theory Meets Prime Numbers</h2>
             <div class="discovery-box">
                 <p>Prime Information Entropy introduces an information-theoretic measure I(p) that quantifies the "information content" of prime numbers. This approach reveals phase transitions, mutual information leakage in composites, and surprising connections to fundamental constants like the golden ratio. By treating primes as information sources, we uncover new patterns that could potentially undermine cryptographic assumptions.</p>
-            </div>
+            
+    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+        <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
+    </div>
+    </div>
         </section>
 
         <section id="mathematical-framework">
@@ -146,7 +150,11 @@
                 <p>For RSA modulus N = pq, detect compositeness via:</p>
                 <div class="math-display">
                     \[\Delta(N) = I(N) - I_{\text{expected}}(N) < -\tau\]
-                </div>
+                
+    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+        <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
+    </div>
+    </div>
                 <p>where I_{expected}(N) = log₂(N) - 1 and τ is a threshold.</p>
                 <p><strong>Attack algorithm</strong>:</p>
                 <ol>
@@ -162,7 +170,11 @@
                 <p>I(p) equals the von Neumann entropy of quantum state:</p>
                 <div class="math-display">
                     \[|\psi_p\rangle = \frac{1}{\sqrt{p-1}} \sum_{k=1}^{p-1} e^{2\pi i k/p} |k\rangle\]
-                </div>
+                
+    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+        <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
+    </div>
+    </div>
                 <p>This enables quantum algorithms that measure I(N) in O(log N) time using phase estimation!</p>
             </div>
 
@@ -171,7 +183,11 @@
                 <p>Fundamental limitation discovered:</p>
                 <div class="math-display">
                     \[\text{Var}(I(N)) < \frac{\log\log N}{N^{1/4}}\]
-                </div>
+                
+    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+        <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
+    </div>
+    </div>
                 <p>For cryptographic N ~ 2^{2048}, variance is too small to distinguish composites reliably.</p>
                 <p><strong>Implication</strong>: Method works for small numbers but faces exponential difficulty scaling.</p>
             </div>
