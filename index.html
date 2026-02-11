@@ -4,8 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prime Patterns: Discoveries and Insights</title>
+    <meta name="description" content="An exploration of patterns within prime numbers, documenting 100 discoveries including gap analysis, modular structures, and statistical regularities.">
     <link rel="stylesheet" href="styles.css">
     <!-- polyfill.io removed due to supply chain compromise; modern browsers support ES6 natively -->
+    <script>
+    window.MathJax = {
+      startup: {
+        typeset: false
+      },
+      tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+    };
+    </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
@@ -3605,5 +3614,34 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+    // Lazy MathJax rendering - only typeset sections as they scroll into view
+    document.addEventListener('DOMContentLoaded', function() {
+      function lazyTypeset() {
+        if (typeof MathJax === 'undefined' || !MathJax.typesetPromise) {
+          setTimeout(lazyTypeset, 500);
+          return;
+        }
+        // Typeset the first few visible sections immediately
+        var firstSections = document.querySelectorAll('section:nth-child(-n+4)');
+        if (firstSections.length) MathJax.typesetPromise(Array.from(firstSections));
+
+        // Lazy-load the rest
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              MathJax.typesetPromise([entry.target]);
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { rootMargin: '200px' });
+
+        document.querySelectorAll('section:nth-child(n+5)').forEach(function(s) {
+          observer.observe(s);
+        });
+      }
+      lazyTypeset();
+    });
+    </script>
 </body>
 </html>
