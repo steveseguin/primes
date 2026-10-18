@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>100 Things We Noticed About Primes</title>
     <meta name="description" content="100 things we noticed about prime numbers. Some are known. Some are wrong. A few might be interesting.">
-    <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="styles.css">
     <!-- polyfill.io removed due to supply chain compromise; modern browsers support ES6 natively -->
     <script>
     window.MathJax = {
@@ -20,7 +23,7 @@
 <body>
     <header>
         <h1>100 Things We Noticed About Primes</h1>
-        <p style="font-size: 1.1rem; opacity: 0.7; margin-top: 0.5rem; font-weight: normal;">Some are known. Some are wrong. A few might be interesting.</p>
+        <p class="tagline">Some are known. Some are wrong. A few might be interesting.</p>
         <nav>
             <ul>
                 <li><a href="#introduction">Introduction</a></li>
@@ -146,7 +149,7 @@
                 <div class="math-display">
                     \[G(x) = \sum_{n=1}^{\infty} x^{p_{n+1} - p_n} \quad \text{for } 0 < x < 1\]
                 
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - PARTIALLY_TRUE:</strong> Series exists but has essential singularity at |x|=1, limiting utility.
     </div>
     </div>
@@ -202,7 +205,7 @@
                 <div class="math-display">
                     \[C(p,q) = \gcd(p+q, |p-q|) \cdot \omega(pq)\]
                 
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -247,7 +250,7 @@
                 <div class="math-display">
                     \[z_p = \sqrt{p} \cdot e^{2\pi i \cdot \text{frac}(\sqrt{p})}\]
                 
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -303,7 +306,7 @@
                     \[D_{ij} = \gcd(|p_i - p_j|, i + j)\]
                 </div>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -357,7 +360,7 @@
                 <div class="math-display">
                     \[h_p = \tanh\left(\frac{\ln(p)}{2}\right) \cdot e^{2\pi i \cdot \Omega(p)/p}\]
                 
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -407,7 +410,7 @@
                     0 & \text{otherwise}
                     \end{cases}\]
                 
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -454,7 +457,7 @@
                 <div class="math-display">
                     \[\vec{v}_p = (p \bmod 2, p \bmod 3, p \bmod 5, ..., p \bmod p_n)\]
                 
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -500,7 +503,7 @@
                 <div class="math-display">
                     \[T(x) = x + \frac{\sin(2\pi x p_{\lfloor x \rfloor})}{p_{\lfloor x \rfloor + 1} - p_{\lfloor x \rfloor}}\]
                 
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -555,7 +558,7 @@
                 <div class="math-display">
                     \[K_p = T(p, p \bmod 6 + 1)\]
                 
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -614,7 +617,7 @@
                 <div class="math-display">
                     \[|\psi_n\rangle = \frac{1}{\sqrt{p_n}} \sum_{k=1}^{p_n-1} e^{2\pi i k^2/p_n} |k\rangle\]
                 
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -671,7 +674,7 @@
                 <div class="math-display">
                     \[C_n = [0,1] \setminus \bigcup_{k=1}^{p_n} \left(\frac{k}{p_n} - \frac{1}{p_n^2}, \frac{k}{p_n} + \frac{1}{p_n^2}\right)\]
                 
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -728,7 +731,7 @@
                     \[H(x) = \sum_{p \text{ prime}} \frac{\sin(px)}{p} \cdot \cos\left(\frac{x}{p}\right)\]
                 </div>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -785,7 +788,7 @@
                 <h3>Definition</h3>
                 <p>Construct graph G_n with vertices {1,2,...,n} and edges (i,j) if |i-j| is prime. The chromatic polynomial P_n(k) counts proper k-colorings.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -838,7 +841,7 @@
                 <div class="math-display">
                     \[\Theta_p(\tau) = \sum_{n=1}^{\infty} \chi_p(n) q^{n^2}\]
                 
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -884,7 +887,7 @@
                     \[P(x) = \prod_{p \text{ prime}} \frac{1}{1-x^p}\]
                 </div>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -925,7 +928,7 @@
                 <div class="math-display">
                     \[Z_p(s) = \sum_{n=1}^{\infty} \frac{\mu(n) \chi_p(n)}{n^s}\]
                 
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -965,7 +968,7 @@
                     \end{cases}\]
                 </div>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -1007,7 +1010,7 @@
                 <div class="math-display">
                     \[PF_n = F_n \bmod p_n\]
                 
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -1052,7 +1055,7 @@
                     \[K(x,y) = \sum_{p \text{ prime}} \frac{1}{p} e^{-|x-y|/p}\]
                 </div>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -1098,7 +1101,7 @@
                     <li>k-simplices: connect k+1 pairwise coprime numbers</li>
                 </ul>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -1153,7 +1156,7 @@
                     \[I(p) = -\sum_{k=1}^{p-1} \frac{k^{p-1} \bmod p}{p^2} \log_2\left(\frac{k^{p-1} \bmod p}{p^2}\right)\]
                 </div>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -1197,7 +1200,7 @@
                 <div class="math-display">
                     \[\sigma_i^{(p)} = \sigma_i^{p \bmod (i+1)}\]
                 
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -1242,7 +1245,7 @@
                 <div class="math-display">
                     \[\omega_p = \sum_{n=1}^{\infty} \frac{\Lambda(n)}{n} \sin\left(\frac{2\pi n}{p}\right) \frac{dx}{x}\]
                 
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -1291,7 +1294,7 @@
                     <li>Composition: Standard function composition</li>
                 </ul>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -1336,7 +1339,7 @@
                     \[k(x,y) = \exp\left(-\sum_{p \leq \max(x,y)} \frac{|x \bmod p - y \bmod p|}{p}\right)\]
                 </div>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - PARTIALLY_TRUE:</strong> Can achieve 60-70% accuracy on small primes, not 96.3%.
     </div>
     </div>
@@ -1381,7 +1384,7 @@
                 <div class="math-display">
                     \[\Psi_p(x) = \sum_{n=1}^{\infty} \frac{\mu(n)}{\sqrt{n}} e^{-\frac{(x-p)^2}{2n}}\]
                 
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -1431,7 +1434,7 @@
                     \end{cases}\]
                 </div>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -1474,7 +1477,7 @@
                 <div class="math-display">
                     \[R(a_n) = a_{p_n} + \sum_{d|n, d<n} \mu(n/d) a_d\]
                 
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -1522,7 +1525,7 @@
                     \end{cases}\]
                 </div>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -1568,7 +1571,7 @@
                     <li>Activation: σ(x) = x mod nearest_prime(|x|)</li>
                 </ul>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -1612,7 +1615,7 @@
                     \[X_n = \bigvee_{i=1}^{n} S^1_{1/p_i}\]
                 </div>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -1660,7 +1663,7 @@
                     <li>p varies through prime sequence</li>
                 </ul>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -1704,7 +1707,7 @@
                     \[\rho_p(\sigma)(e_i) = e_{σ(i) \bmod p}\]
                 </div>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -1745,7 +1748,7 @@
                 <h3>Definition</h3>
                 <p>Build filtration of simplicial complexes K_ε with vertices at primes, edges when |p-q| < ε.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -1788,7 +1791,7 @@
                 <div class="math-display">
                     \[S_i = X^{p_i} \otimes Z^{p_{i+1}}\]
                 
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -1833,7 +1836,7 @@
                     \[\frac{d\rho(x,t)}{dt} = \beta(\rho) = \rho(1-\rho) - \sum_{p} \delta(x-p)e^{-t/p}\]
                 </div>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -1867,7 +1870,7 @@
                     \[K_0(\mathcal{P}) = \bigoplus_{p \text{ prime}} \mathbb{Z} \cdot [M_p]\]
                 </div>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -1893,7 +1896,7 @@
                     \[f(x) = \sum_{p \text{ prime}} \frac{\sin^2(\pi(x-p))}{|x-p|+1}\]
                 </div>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -1916,7 +1919,7 @@
                 <h3>Definition</h3>
                 <p>Define operad P with P(n) = formal combinations of partitions of n into primes.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -1937,7 +1940,7 @@
                     \[\omega = \sum_{i=1}^{n} \frac{1}{p_i} dx_i \wedge dy_i\]
                 </div>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -1959,7 +1962,7 @@
                 <h3>Definition</h3>
                 <p>On moduli space M_g, define prime divisors D_p for each prime p.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -1986,7 +1989,7 @@
                     \[\Delta(g_p) = g_p \otimes 1 + 1 \otimes g_p + \sum_{q<p} g_q \otimes g_{p-q}\]
                 </div>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2009,7 +2012,7 @@
                     <li>Higher differentials encode prime k-tuples</li>
                 </ul>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2027,7 +2030,7 @@
                 <h3>Definition</h3>
                 <p>Define CFT with primary fields φ_p of dimension h_p = (p-1)/24.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2048,7 +2051,7 @@
                 <h3>Definition</h3>
                 <p>Define derived category D^b(P) with objects as complexes of prime-graded modules.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2072,7 +2075,7 @@
                 <h3>Definition</h3>
                 <p>Define Galois representation ρ_P: Gal(Q̄/Q) → GL_n(Z_p) where dimensions encode prime relationships.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2101,7 +2104,7 @@
                 <div class="math-display">
                     \[\text{val}_p(x_i) = \min_{q \in P_i} v_p(q)\]
                 
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2130,7 +2133,7 @@
                 <h3>Definition</h3>
                 <p>Build filtration of simplicial complexes K_ε with vertices at primes, edges when |p-q| < ε.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2157,7 +2160,7 @@
                 <h3>Definition</h3>
                 <p>Define mixed Hodge structure on H^n(X_P) where X_P is prime configuration space.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2183,7 +2186,7 @@
                 <h3>Definition</h3>
                 <p>Define quantum group U_q(P) with generators E_p, F_p, K_p for each prime p.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2209,7 +2212,7 @@
                 <h3>Definition</h3>
                 <p>Define measure-preserving transformation T: X → X where X = ∏_p Z_p with Haar measure.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2236,7 +2239,7 @@
                 <h3>Definition</h3>
                 <p>Establish correspondence between automorphic representations π_P and Galois representations σ_P indexed by prime sets.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2262,7 +2265,7 @@
                 <h3>Definition</h3>
                 <p>Define motivic cohomology groups H^i_M(Spec Z, Z(j)) with prime-indexed weight filtration.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2289,7 +2292,7 @@
                 <h3>Definition</h3>
                 <p>Define cluster algebra A_P with initial cluster variables {x_p} for first n primes.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2315,7 +2318,7 @@
                 <h3>Definition</h3>
                 <p>In HoTT, define Prime : Type with constructors for each prime and paths between related primes.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2343,7 +2346,7 @@
                 <div class="math-display">
                     \[f_P(\tau) = \sum_{n=1}^{\infty} a_n q^n\]
                 
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2372,7 +2375,7 @@
                 <h3>Definition</h3>
                 <p>Define Hamiltonian H_P on symplectic manifold with critical points at prime coordinates.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2399,7 +2402,7 @@
                 <h3>Definition</h3>
                 <p>Elements of GT act on fundamental group of P^1 - {0,1,∞,primes}.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2428,7 +2431,7 @@
                 <div class="math-display">
                     \[H^{p,q}(X_P) = H^{n-p,q}(Y_P)\]
                 
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2457,7 +2460,7 @@
                 <h3>Definition</h3>
                 <p>Define algebraic stack [P/G] where P is prime configuration space, G acts by permutations preserving gaps.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - PARTIALLY_TRUE:</strong> Real pattern but provides no computational advantage for cryptography.
     </div>
     </div>
@@ -2485,7 +2488,7 @@
                 <div class="math-display">
                     \[S_{CS}[A] = \frac{k}{4\pi} \int_{M_P} \text{Tr}(A \wedge dA + \frac{2}{3}A \wedge A \wedge A)\]
                 
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2514,7 +2517,7 @@
                 <h3>Definition</h3>
                 <p>Dynamical system f: P^1(Q̄) → P^1(Q̄) with prime periodic points.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2541,7 +2544,7 @@
                 <h3>Definition</h3>
                 <p>Vertex algebra V_P with generators φ_p(z) for each prime p.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2567,7 +2570,7 @@
                 <h3>Definition</h3>
                 <p>Berkovich analytification (Spec Z)^{an} with prime ideals as type I points.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2594,7 +2597,7 @@
                 <h3>Definition</h3>
                 <p>Category C_P with objects as positive integers, morphisms as prime factorizations.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2622,7 +2625,7 @@
                 <div class="math-display">
                     \[X \times_{\text{Spec } \mathbb{Z}} \text{Spec } \mathbb{F}_p \cong \mathbb{P}^{n_p}\]
                 
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2651,7 +2654,7 @@
                 <h3>Definition</h3>
                 <p>Loop space ΩP of prime configuration space with based loops at infinity.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2680,7 +2683,7 @@
                     \[\alpha \star \beta = \alpha \cup \beta + \sum_{d>0} \langle \alpha, \beta, \gamma \rangle_{0,3,d} q^d\]
                 </div>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2703,7 +2706,7 @@
                 <h3>Definition</h3>
                 <p>Fukaya category Fuk(X_P) with objects as Lagrangians through prime points.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2732,7 +2735,7 @@
                 <div class="math-display">
                     \[F_P(z) \sim \sum_{n=0}^{\infty} \frac{a_n}{z^n}\]
                 
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2763,7 +2766,7 @@
                     \[S[\phi] = \int d^4x \left(\sum_p \frac{1}{2}(\partial\phi_p)^2 + \sum_{p,q} g_{pq}\phi_p\phi_q\right)\]
                 </div>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2789,7 +2792,7 @@
                 <h3>Definition</h3>
                 <p>Chain complex C_• with C_n = Z[primes of digit length n].</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2814,7 +2817,7 @@
                 <h3>Definition</h3>
                 <p>C*-algebra A_P generated by projections e_p for each prime.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2841,7 +2844,7 @@
                 <h3>Definition</h3>
                 <p>Quantum circuit with prime-indexed qubits |p⟩.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2870,7 +2873,7 @@
                 <div class="math-display">
                     \[D_P = \sum_{p} p \frac{\partial}{\partial x_p}\]
                 
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2901,7 +2904,7 @@
                     \[J(P) = \{S \subseteq P : \forall p \in P, \exists q \in S, q|p-1\}\]
                 </div>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2927,7 +2930,7 @@
                 <h3>Definition</h3>
                 <p>Cobordism ring Ω_*^P with generators [M_p] for prime-dimensional manifolds.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -2954,7 +2957,7 @@
                 <h3>Definition</h3>
                 <p>Supermanifold (M_P|N_P) with even coordinates at primes, odd at prime gaps.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - PARTIALLY_TRUE:</strong> Real pattern but provides no computational advantage for cryptography.
     </div>
     </div>
@@ -2979,7 +2982,7 @@
                 <h3>Definition</h3>
                 <p>∞-category P_∞ with n-morphisms as n-wise prime relationships.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -3008,7 +3011,7 @@
                 <div class="math-display">
                     \[Z^{\alpha} = (p^A, \pi_{A'})\]
                 
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -3036,7 +3039,7 @@
                 <div class="math-display">
                     \[f \star g = fg + \sum_{n=1}^{\infty} \hbar^n B_n(f,g)\]
                 
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -3064,7 +3067,7 @@
                 <h3>Definition</h3>
                 <p>Moduli stack M_P parametrizing families of prime configurations with automorphisms.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -3090,7 +3093,7 @@
                 <h3>Definition</h3>
                 <p>Yang-Mills theory with gauge group G_P = ∏_p U(1)_p.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -3116,7 +3119,7 @@
                 <h3>Definition</h3>
                 <p>Moment map μ: P → g* for Hamiltonian G-action on prime phase space.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -3142,7 +3145,7 @@
                 <h3>Definition</h3>
                 <p>Category Perv(P) of perverse sheaves on prime configuration space.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -3168,7 +3171,7 @@
                 <h3>Definition</h3>
                 <p>Categorification of prime Jones polynomial with chain complex C^{i,j}(K_P).</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -3196,7 +3199,7 @@
                 <div class="math-display">
                     \[\frac{\partial g_{ij}}{\partial t} = -2R_{ij}^P\]
                 
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -3226,7 +3229,7 @@
                 <div class="math-display">
                     \[Z: K(X_P) \to \mathbb{C}\]
                 
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -3257,7 +3260,7 @@
                     \[D_A \phi = 0, \quad F_A^+ = \rho(\phi \otimes \phi^*)_0\]
                 </div>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -3286,7 +3289,7 @@
                     \[b(a_0 \otimes ... \otimes a_n) = \sum_{i=0}^{n-1} (-1)^i a_0 \otimes ... \otimes a_ia_{i+1} \otimes ... \otimes a_n\]
                 </div>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -3311,7 +3314,7 @@
                 <div class="math-display">
                     \[\text{curv}(\nabla) = -i\omega_P\]
                 
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -3336,7 +3339,7 @@
                 <h3>Definition</h3>
                 <p>DM stack M̄_{g,n}^P of stable curves with prime-marked points.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -3364,7 +3367,7 @@
                 <div class="math-display">
                     \[DT_n^P = \int_{[I_n(X,\beta)]^{vir}} 1\]
                 
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -3391,7 +3394,7 @@
                 <h3>Definition</h3>
                 <p>HF^+(Y_P) for 3-manifold Y_P with prime Heegaard diagram.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -3419,7 +3422,7 @@
                 <div class="math-display">
                     \[Z_P(S^1) = \mathbb{C}[P]\]
                 
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -3447,7 +3450,7 @@
                 <h3>Definition</h3>
                 <p>Fundamental group π_1(X_P) of prime configuration variety determines X_P up to isomorphism.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -3475,7 +3478,7 @@
                 <div class="math-display">
                     \[\mathcal{M}_{dR}^P(X) \cong \mathcal{M}_{Dol}^P(X)\]
                 
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -3507,7 +3510,7 @@
                     \[\text{Spa}(K, K^+) \sim \text{Spa}(K^{\flat}, K^{\flat+})\]
                 </div>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -3533,7 +3536,7 @@
                 <h3>Definition</h3>
                 <p>Height n formal group law F_n^P with prime-indexed coefficients.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -3560,7 +3563,7 @@
                 <h3>Definition</h3>
                 <p>Universal Teichmüller space T(1) with prime basepoints, containing all Teichmüller spaces.</p>
             
-    <div class="editor-note" style="background-color: #ffe6e6; border: 2px solid #e74c3c; border-radius: 5px; padding: 10px; margin: 10px 0;">
+    <div class="editor-note">
         <strong>⚠️ Editor Note - UNKNOWN:</strong> Requires further mathematical investigation to determine validity.
     </div>
     </div>
@@ -3602,10 +3605,10 @@
         <p>Last updated: <span id="last-updated"></span></p>
         <p>Created through collaborative exploration with Claude</p>
         <div style="margin-top: 20px; text-align: center;">
-            <a href="investigations-summary.html" style="display: inline-block; margin: 5px; padding: 10px 20px; background-color: #3498db; color: white; text-decoration: none; border-radius: 5px;">📊 View All Investigations</a>
-            <a href="final-synthesis.html" style="display: inline-block; margin: 5px; padding: 10px 20px; background-color: #2ecc71; color: white; text-decoration: none; border-radius: 5px;">📖 Complete Journey & Synthesis</a>
-            <a href="meta-prime-discovery.html" style="display: inline-block; margin: 5px; padding: 10px 20px; background-color: #e74c3c; color: white; text-decoration: none; border-radius: 5px;">🔥 Meta-Prime Discovery</a>
-            <a href="ultimate-synthesis.html" style="display: inline-block; margin: 5px; padding: 10px 20px; background-color: #f39c12; color: white; text-decoration: none; border-radius: 5px;">⚡ MQTA Algorithm</a>
+            <a href="investigations-summary.html" class="btn">📊 View All Investigations</a>
+            <a href="final-synthesis.html" class="btn">📖 Complete Journey & Synthesis</a>
+            <a href="meta-prime-discovery.html" class="btn">🔥 Meta-Prime Discovery</a>
+            <a href="ultimate-synthesis.html" class="btn">⚡ MQTA Algorithm</a>
         </div>
     </footer>
 

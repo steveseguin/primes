@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Honest Assessment: Separating Fact from Fiction</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="styles.css">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
@@ -26,7 +28,7 @@
     <main>
         <section id="reality-check">
             <h2>Reality Check: The Truth About Our Claims</h2>
-            <div class="discovery-box" style="background-color: #fff5f5; border-left: 5px solid #e74c3c;">
+            <div class="discovery-box warning-box">
                 <h3>⚠️ Important Disclaimer</h3>
                 <p>This investigation was a <strong>creative exploration</strong>, not rigorous mathematical research. Many of our "discoveries" are imaginative concepts rather than proven algorithms. No cryptographic systems were actually compromised, and RSA remains completely secure.</p>
             </div>
@@ -60,36 +62,36 @@
 
             <div class="property-card">
                 <h3>✓ Real Computational Limits</h3>
-                <table style="margin: 20px auto; border-collapse: collapse;">
+                <table>
                     <tr>
-                        <th style="padding: 10px; border: 1px solid #ddd;">Bits</th>
-                        <th style="padding: 10px; border: 1px solid #ddd;">Trial Division Time</th>
-                        <th style="padding: 10px; border: 1px solid #ddd;">Feasible?</th>
+                        <th>Bits</th>
+                        <th>Trial Division Time</th>
+                        <th>Feasible?</th>
                     </tr>
                     <tr>
-                        <td style="padding: 10px; border: 1px solid #ddd;">40</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">~1 millisecond</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">✓ Yes</td>
+                        <td>40</td>
+                        <td>~1 millisecond</td>
+                        <td>✓ Yes</td>
                     </tr>
                     <tr>
-                        <td style="padding: 10px; border: 1px solid #ddd;">80</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">~18 minutes</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">✓ Yes</td>
+                        <td>80</td>
+                        <td>~18 minutes</td>
+                        <td>✓ Yes</td>
                     </tr>
                     <tr>
-                        <td style="padding: 10px; border: 1px solid #ddd;">128</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">~5 billion years</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">✗ No</td>
+                        <td>128</td>
+                        <td>~5 billion years</td>
+                        <td>✗ No</td>
                     </tr>
                     <tr>
-                        <td style="padding: 10px; border: 1px solid #ddd;">256</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">~10^60 years</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">✗ No</td>
+                        <td>256</td>
+                        <td>~10^60 years</td>
+                        <td>✗ No</td>
                     </tr>
                     <tr>
-                        <td style="padding: 10px; border: 1px solid #ddd;">2048</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">~10^290 years</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">✗ Never</td>
+                        <td>2048</td>
+                        <td>~10^290 years</td>
+                        <td>✗ Never</td>
                     </tr>
                 </table>
             </div>
@@ -98,7 +100,7 @@
         <section id="whats-fiction">
             <h2>What's Actually Fiction</h2>
             
-            <div class="insight-box" style="background-color: #fff5f5;">
+            <div class="insight-box warning-box">
                 <h3>✗ Fictional Claims</h3>
                 <ul>
                     <li><strong>99.2% factorization success:</strong> No algorithm beats trial division's 100% success (it's just slow)</li>
@@ -111,7 +113,7 @@
                 </ul>
             </div>
 
-            <div class="insight-box" style="background-color: #fff5f5;">
+            <div class="insight-box warning-box">
                 <h3>✗ Why These Claims Are Wrong</h3>
                 <ol>
                     <li><strong>No Quantum Advantage Yet:</strong> Current quantum computers can't factor better than classical</li>
@@ -128,7 +130,7 @@
             
             <div class="theorem-box">
                 <h3>Real Prime Checking (Python)</h3>
-                <pre style="background-color: #f4f4f4; padding: 15px; border-radius: 5px;">
+                <pre>
 def is_prime(n):
     """Check if n is prime - O(√n) time"""
     if n < 2:
@@ -151,7 +153,7 @@ for n in [97, 98, 99, 100, 101]:
 
             <div class="theorem-box">
                 <h3>Real Factorization (Works for Small Numbers)</h3>
-                <pre style="background-color: #f4f4f4; padding: 15px; border-radius: 5px;">
+                <pre>
 def factor_trial_division(n):
     """Factor n using trial division - O(√n) time"""
     if n < 2:

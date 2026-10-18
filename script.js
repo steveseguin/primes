@@ -55,16 +55,7 @@ function setupDynamicContent() {
     if (futureWork) {
         const addButton = document.createElement('button');
         addButton.textContent = 'Check for Updates';
-        addButton.style.cssText = `
-            background-color: #3498db;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-            margin-top: 1rem;
-        `;
+        addButton.className = 'btn';
         addButton.addEventListener('click', checkForUpdates);
         futureWork.appendChild(addButton);
     }
