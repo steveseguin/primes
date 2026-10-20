@@ -169,7 +169,7 @@ class RealPrimeAlgorithms:
         primes = set(self.sieve_of_eratosthenes(n))
         partitions = []
         
-        for p in primes:
+        for p in sorted(primes):
             if p > n // 2:
                 break
             if n - p in primes:
