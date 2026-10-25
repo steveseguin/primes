@@ -1,5 +1,5 @@
-// Configure MathJax
-window.MathJax = {
+// Keep the page configuration or an already-loaded MathJax runtime intact.
+window.MathJax = window.MathJax || {
     tex: {
         inlineMath: [['\\(', '\\)']],
         displayMath: [['\\[', '\\]']],
